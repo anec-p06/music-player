@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Electron build files
+dist/
+
+# macOS
+.DS_Store
+
+# Copyrighted music
+songs/

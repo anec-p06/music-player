@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>MUSIC PLAYER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- 🌟 Start Screen -->
+  <div id="start-screen">
+    <img src="images/main.jpg" alt="choose album x" id="start-cover" />
+    <h1>CHOOSE AN ALBUM</h1>
+    <p>Select an album to begin</p>
+
+    <div id="album-buttons">
+      <button class="album-select back-ren" data-album="ren">R E N</button>
+      <button class="album-select back-anna" data-album="anna">A N N A</button>
+      <button class="album-select back-kamile" data-album="kamile">K A M I L E</button>
+      <button class="album-select back-arch" data-album="arch">A R C H</button>
+      <button class="album-select back-shauna" data-album="shauna">S H A U N A</button>
+    </div>
+  </div>
+
+  <!-- 🎵 Player Screen -->
+  <div id="player-screen" style="display: none;">
+    <div class="player-content">
+
+      <!-- Album Cover -->
+      <img id="album-cover" src="images/default.jpg" alt="Album Cover" />
+
+      <!-- Song Info -->
+      <div class="song-info">
+        <p id="song-title">Song Title</p>
+        <p id="artist-name">Artist Name</p>
+      </div>
+
+      <!-- Divider -->
+      <div class="section-divider1"></div>
+
+      <!-- Audio Element -->
+      <audio id="audio-player">
+        <source id="audio-source" src="" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation-row">
+        <button id="back-to-home">⬅ album select</button>
+        <div id="nextSongName">Next song: -</div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div id="progress-container">
+        <input type="range" id="progress-bar" min="0" max="100" value="0">
+        <span id="value-display">0:00</span>
+      </div>
+
+      <!-- Navigation Images -->
+      <div class="controls">
+        <button id="btnPrev"><img src="images/rewind.png" alt="Previous"></button>
+        <img id="imgPlay" src="images/play.png" alt="Play" style="width: 40px; cursor: pointer;">
+        <img id="imgPause" src="images/pause.png" alt="Pause" style="width: 40px; display: none; cursor: pointer;">
+        <button id="btnBefore"><img src="images/forward.png" alt="Next"></button>
+      </div>
+
+      <!-- Divider -->
+      <div class="section-divider2"></div>
+
+      <!-- Playlist Display -->
+      <div id="song-list-wrapper" class="song-list"></div>
+      <div id="song-list" class="song-list"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="music.js"></script>
+</body>
+
+</html>
